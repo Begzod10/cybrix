@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'client_requests'
+    'client_requests',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -73,8 +74,9 @@ WSGI_APPLICATION = 'cybrix.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 SWAGGER_SETTINGS = {"SECURITY_DEFINITIONS": {"Bearer": {"type": "apiKey", "name": "Authorization", "in": "header", }},
                     "USE_SESSION_AUTH": True}
-DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql', 'NAME': 'cybrix', 'USER': 'postgres',
-                         'PASSWORD': '123', 'HOST': 'localhost', 'PORT': '5432'}}
+DATABASES = {
+    'default': {'ENGINE': 'django.db.backends.postgresql', 'NAME': 'cybrix', 'USER': 'postgres', 'PASSWORD': '123',
+                'HOST': 'db', 'PORT': '5432'}}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
