@@ -10,7 +10,7 @@ from cybrix.functions import CustomResponseMixin
 
 
 class ClientRequestViewSet(CustomResponseMixin, viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     queryset = ClientRequests.objects.all()
     serializer_class = ClientRequestSerializers
 
