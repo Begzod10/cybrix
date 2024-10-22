@@ -17,7 +17,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'client_requests',
-    'drf_yasg'
+    'drf_yasg',
+    'rest_framework',
+    'projects',
+    'project_types',
 ]
 
 MIDDLEWARE = [
@@ -56,8 +59,14 @@ WSGI_APPLICATION = 'cybrix.wsgi.application'
 SWAGGER_SETTINGS = {"SECURITY_DEFINITIONS": {"Bearer": {"type": "apiKey", "name": "Authorization", "in": "header", }},
                     "USE_SESSION_AUTH": True}
 DATABASES = {
-    'default': {'ENGINE': 'django.db.backends.postgresql', 'NAME': 'cybrix', 'USER': 'postgres', 'PASSWORD': '123',
-                'HOST': 'db', 'PORT': '5432'}}
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cybrix',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'db',
+        'PORT': '5432'
+    }}
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
