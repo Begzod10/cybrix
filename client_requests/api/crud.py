@@ -6,10 +6,13 @@ from client_requests.models import ClientRequests
 from client_requests.serializers import (
     ClientRequestSerializers
 )
-from cybrix.functions import CustomResponseMixin
+from cybrix.functions import QueryParamFilterMixin
 
 
-class ClientRequestViewSet(CustomResponseMixin, viewsets.ModelViewSet):
+class ClientRequestViewSet(QueryParamFilterMixin, viewsets.ModelViewSet):
+    filter_mappings = {
+        'status': 'status'
+    }
     # permission_classes = [IsAuthenticated]
     queryset = ClientRequests.objects.all()
     serializer_class = ClientRequestSerializers
