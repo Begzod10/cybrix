@@ -1,8 +1,9 @@
 from django.db import models
+from django.db.models.signals import pre_delete
+from django.dispatch import receiver
+
 from project_types.models import ProjectType
 
-
-# Create your models here.
 
 class Project(models.Model):
     name = models.CharField(max_length=255)
@@ -22,3 +23,10 @@ class ProjectDocuments(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
     deleted_status = models.BooleanField(default=False)
     file = models.FileField(null=True)
+
+
+@receiver(pre_delete, sender=Project)
+def delete_related_documents(sender, instance, **kwargs):
+    documents = ProjectDocuments.objects.filter(project=instance)
+    for document in documents:
+        document.delete()
