@@ -7,7 +7,7 @@ from project_types.models import ProjectType
 
 class Project(models.Model):
     name = models.CharField(max_length=255)
-    registered_at = models.DateTimeField(auto_now_add=True)
+    registered_at = models.DateField(auto_now_add=True)
     description = models.TextField(null=True)
     deleted_status = models.BooleanField(default=False)
     finishing_date = models.DateField(null=True)
@@ -18,7 +18,7 @@ class Project(models.Model):
 
 
 class ProjectDocuments(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255,null=True)
     description = models.TextField(null=True)
     project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
     deleted_status = models.BooleanField(default=False)
