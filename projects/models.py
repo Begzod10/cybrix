@@ -20,7 +20,7 @@ class Project(models.Model):
 class ProjectDocuments(models.Model):
     name = models.CharField(max_length=255,null=True)
     description = models.TextField(null=True)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True,related_name='image')
     deleted_status = models.BooleanField(default=False)
     file = models.FileField(null=True)
 
