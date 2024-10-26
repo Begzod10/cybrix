@@ -6,10 +6,10 @@ from client_requests.models import ClientRequests
 from client_requests.serializers import (
     ClientRequestSerializers
 )
-from cybrix.functions import QueryParamFilterMixin
+from cybrix.functions import QueryParamFilterMixin,CustomResponseMixin
 
 
-class ClientRequestViewSet(QueryParamFilterMixin, viewsets.ModelViewSet):
+class ClientRequestViewSet(CustomResponseMixin,QueryParamFilterMixin, viewsets.ModelViewSet):
     filter_mappings = {
         'status': 'status'
     }

@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from .models import Project, ProjectDocuments
 
 
@@ -12,7 +13,7 @@ class ProjectSerializers(serializers.ModelSerializer):
     def get_image(self, obj):
         urls = []
         for i in obj.image.all():
-            urls.append(i.file.url)
+            urls.append({'id': i.pk, 'url': i.file.url})
         return urls
 
 

@@ -22,6 +22,7 @@ class ProjectDocumentsViewSet(viewsets.ModelViewSet):
         response = super().destroy(request, *args, **kwargs)
         return Response({'message': 'deleted'}, status=status.HTTP_200_OK)
 
-    def get_queryset(self):
-        if self.request.method == 'GET':
-            return self.queryset.filter(deleted_status=False, project=self.kwargs['project_pk'])
+    # def get_queryset(self):
+    #     if self.request.method == 'GET':
+    #         print('test')
+    #         return self.queryset.filter(deleted_status=False, project=self.kwargs['project_pk'])

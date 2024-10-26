@@ -22,9 +22,7 @@ class CustomResponseMixin:
         if isinstance(response.data, dict):
             response.data['msg'] = custom_message
         elif isinstance(response.data, list):
-            response.data = {
-                'msg': custom_message,
-            }
+            response.data.append({'msg': custom_message})
         return response
 
 
@@ -39,8 +37,9 @@ class QueryParamFilterMixin:
             value = query_params.get(param)
             if not value or value == 'null':
                 if param == 'branch':
-                    user = get_user(self.request)
-                    self.filter_conditions &= Q(**{field: user.branch_id})
+                    pass
+                    # user = get_user(self.request)
+                    # self.filter_conditions &= Q(**{field: user.branch_id})
                 continue
 
             if param == 'age' and '-' in value:
