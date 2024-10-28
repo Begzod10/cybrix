@@ -1,5 +1,6 @@
-from pathlib import Path
 import os
+from datetime import timedelta
+from pathlib import Path
 
 # Boshqa konfiguratsiyalar...
 DATABASES = {
@@ -34,6 +35,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'projects',
     'project_types',
+    'rest_framework_simplejwt',
+
 ]
 
 MIDDLEWARE = [
@@ -71,7 +74,7 @@ WSGI_APPLICATION = 'cybrix.wsgi.application'
 
 SWAGGER_SETTINGS = {"SECURITY_DEFINITIONS": {"Bearer": {"type": "apiKey", "name": "Authorization", "in": "header", }},
                     "USE_SESSION_AUTH": True}
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': 'cybrix',
@@ -86,7 +89,7 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME', 'cybrix'),
         'USER': os.getenv('DB_USER', 'postgres'),
         'PASSWORD': os.getenv('DB_PASSWORD', '123'),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'HOST': os.getenv('DB_HOST', 'db'),
         'PORT': '5432',
     }
 }
@@ -94,20 +97,20 @@ DATABASES = {
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'DEFAULT_RENDERER_CLASSES': ['rest_framework.renderers.JSONRenderer'],
-    # 'DEFAULT_AUTHENTICATION_CLASSES': [
-    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
-    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
 }
 
-# SIMPLE_JWT = {
-#     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
-#     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-#     'ALGORITHM': 'HS256',
-#     'SIGNING_KEY': SECRET_KEY,
-#     'AUTH_HEADER_TYPES': ('JWT',),
-#     'USER_ID_FIELD': 'id',
-#     'USER_ID_CLAIM': 'user_id',
-# }
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ALGORITHM': 'HS256',
+    'SIGNING_KEY': SECRET_KEY,
+    'AUTH_HEADER_TYPES': ('JWT',),
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+}
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Tashkent'
