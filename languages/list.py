@@ -1,0 +1,238 @@
+programming_languages = [
+    {
+        "language": "Python",
+        "icon": "https://www.python.org/static/opengraph-icon-200x200.png",
+        "frameworks": [
+            {"name": "Django", "icon": "https://static.djangoproject.com/img/icon-touch.e4872c4da341.png"},
+            {"name": "Flask", "icon": "https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png"},
+            {"name": "Pyramid", "icon": "https://static.pylonsproject.org/projects/pyramid/en/latest/_static/pyramid.png"},
+            {"name": "FastAPI", "icon": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"},
+        ],
+    },
+    {
+        "language": "JavaScript",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+        "frameworks": [
+            {"name": "React", "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"},
+            {"name": "Angular", "icon": "https://angular.io/assets/images/logos/angular/angular.svg"},
+            {"name": "Vue.js", "icon": "https://vuejs.org/images/logo.png"},
+            {"name": "Node.js", "icon": "https://nodejs.org/static/images/logo.svg"},
+            {"name": "Express.js", "icon": "https://expressjs.com/images/express-facebook-share.png"},
+        ],
+    },
+    {
+        "language": "Java",
+        "icon": "https://www.oracle.com/a/ocom/img/cb71-java-logo.png",
+        "frameworks": [
+            {"name": "Spring", "icon": "https://spring.io/img/spring-logo.svg"},
+            {"name": "Hibernate", "icon": "https://hibernate.org/images/hibernate-logo.svg"},
+            {"name": "Struts", "icon": "https://struts.apache.org/images/struts-logo.svg"},
+            {"name": "JSF", "icon": "https://upload.wikimedia.org/wikipedia/commons/5/56/JavaServerFaces_logo.png"},
+        ],
+    },
+    {
+        "language": "C#",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+        "frameworks": [
+            {"name": ".NET", "icon": "https://dotnet.microsoft.com/static/images/redesign/social/twitter-image-netcore.png"},
+            {"name": "ASP.NET", "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"},
+            {"name": "Blazor", "icon": "https://blazor.net/images/logo.svg"},
+        ],
+    },
+    {
+        "language": "Ruby",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg",
+        "frameworks": [
+            {"name": "Ruby on Rails", "icon": "https://rubyonrails.org/images/rails-logo.svg"},
+            {"name": "Sinatra", "icon": "https://sinatrarb.com/images/logo.svg"},
+        ],
+    },
+    {
+        "language": "PHP",
+        "icon": "https://www.php.net/images/logos/php-logo.svg",
+        "frameworks": [
+            {"name": "Laravel", "icon": "https://laravel.com/img/logomark.min.svg"},
+            {"name": "Symfony", "icon": "https://symfony.com/logos/symfony_black_03.svg"},
+            {"name": "CodeIgniter", "icon": "https://codeigniter.com/assets/images/ci-logo-big.png"},
+            {"name": "Zend Framework", "icon": "https://framework.zend.com/images/logos/ZendFramework-logo.png"},
+        ],
+    },
+    {
+        "language": "Swift",
+        "icon": "https://developer.apple.com/swift/images/swift-og.png",
+        "frameworks": [
+            {"name": "Vapor", "icon": "https://vapor.codes/img/logo.png"},
+            {"name": "Kitura", "icon": "https://www.kitura.dev/assets/img/kitura/kitura.svg"},
+        ],
+    },
+    {
+        "language": "Kotlin",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+        "frameworks": [
+            {"name": "Ktor", "icon": "https://ktor.io/assets/images/ktor-logo.svg"},
+            {"name": "Spring", "icon": "https://spring.io/img/spring-logo.svg"},
+        ],
+    },
+    {
+        "language": "TypeScript",
+        "icon": "https://www.typescriptlang.org/assets/images/icons/apple-touch-icon.png",
+        "frameworks": [
+            {"name": "NestJS", "icon": "https://nestjs.com/img/logo_text.svg"},
+            {"name": "Angular", "icon": "https://angular.io/assets/images/logos/angular/angular.svg"},
+        ],
+    },
+    {
+        "language": "Go",
+        "icon": "https://golang.org/lib/godoc/images/go-logo-blue.svg",
+        "frameworks": [
+            {"name": "Gin", "icon": "https://gin-gonic.com/img/gin-logo.png"},
+            {"name": "Beego", "icon": "https://beego.me/img/beego.svg"},
+            {"name": "Echo", "icon": "https://echo.labstack.com/images/logo.svg"},
+        ],
+    },
+    {
+        "language": "Rust",
+        "icon": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+        "frameworks": [
+            {"name": "Rocket", "icon": "https://rocket.rs/v0.4/images/logo.svg"},
+            {"name": "Actix", "icon": "https://actix.rs/img/logo.png"},
+        ],
+    },
+    {
+        "language": "Dart",
+        "icon": "https://dart.dev/assets/shared/dart/logo+text/horizontal/white-ea3e3878b56ddc13f56a4c0b8c8cb92fbb01dd52f5d84c1a7f1d79a03b77b5a1.svg",
+        "frameworks": [
+            {"name": "Flutter", "icon": "https://flutter.dev/images/flutter-logo-sharing.png"},
+            {"name": "AngularDart", "icon": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg"},
+        ],
+    },
+    {
+        "language": "R",
+        "icon": "https://www.r-project.org/Rlogo.png",
+        "frameworks": [
+            {"name": "Shiny", "icon": "https://www.rstudio.com/wp-content/uploads/2014/03/shiny.png"},
+            {"name": "Plumber", "icon": "https://www.rplumber.io/img/plumber-logo.svg"},
+        ],
+    },
+    {
+        "language": "Scala",
+        "icon": "https://www.scala-lang.org/resources/img/frontpage/scala-spiral.png",
+        "frameworks": [
+            {"name": "Play", "icon": "https://upload.wikimedia.org/wikipedia/commons/6/62/Play_framework_logo.svg"},
+            {"name": "Akka", "icon": "https://akka.io/resources/images/logos/akka_full_color.svg"},
+        ],
+    },
+    {
+        "language": "Julia",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Julia_Programming_Language_Logo.svg",
+        "frameworks": [
+            {"name": "Genie", "icon": "https://genieframework.github.io/images/genie.png"},
+        ],
+    },
+    {
+        "language": "Erlang",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/2/29/Erlang_logo.svg",
+        "frameworks": [
+            {"name": "Cowboy", "icon": "https://ninenines.eu/static/cowboy.svg"},
+            {"name": "ChicagoBoss", "icon": "https://chicagoboss.org/images/chicago-boss-logo.png"},
+        ],
+    },
+    {
+        "language": "C++",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+        "frameworks": [
+            {"name": "Qt", "icon": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg"},
+            {"name": "Boost", "icon": "https://upload.wikimedia.org/wikipedia/commons/3/34/Boost_logo.svg"},
+        ],
+    },
+    {
+        "language": "Lisp",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/2/20/LISP_logo.svg",
+        "frameworks": [
+            {"name": "Common Lisp", "icon": "https://upload.wikimedia.org/wikipedia/commons/5/5e/CLISP_logo.svg"},
+            {"name": "Scheme", "icon": "https://upload.wikimedia.org/wikipedia/commons/3/39/Scheme_Language_Logo.png"},
+        ],
+    },
+]
+databases = [
+    {
+        "database": "MySQL",
+        "icon": "https://www.mysql.com/common/logos/logo-mysql-170x115.png",
+    },
+    {
+        "database": "PostgreSQL",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+    },
+    {
+        "database": "MongoDB",
+        "icon": "https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg",
+    },
+    {
+        "database": "SQLite",
+        "icon": "https://www.sqlite.org/images/sqlite370_banner.gif",
+    },
+    {
+        "database": "Microsoft SQL Server",
+        "icon": "https://www.microsoft.com/favicon.ico",
+    },
+    {
+        "database": "Oracle Database",
+        "icon": "https://www.oracle.com/a/ocom/img/cb71-java-logo.png",
+    },
+    {
+        "database": "Firebase Realtime Database",
+        "icon": "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-standard.png",
+    },
+    {
+        "database": "Cassandra",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Apache_Cassandra_logo.svg",
+    },
+    {
+        "database": "Redis",
+        "icon": "https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg",
+    },
+    {
+        "database": "MariaDB",
+        "icon": "https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent.png",
+    },
+    {
+        "database": "Neo4j",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Neo4j-logo.png",
+    },
+    {
+        "database": "Elasticsearch",
+        "icon": "https://www.elastic.co/static-res/images/elastic-logo-200.png",
+    },
+    {
+        "database": "DynamoDB",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/4/41/DynamoDB.png",
+    },
+    {
+        "database": "CouchDB",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/3/3a/CouchDB_logo.svg",
+    },
+    {
+        "database": "CockroachDB",
+        "icon": "https://www.cockroachlabs.com/assets/images/logo/cockroachdb.svg",
+    },
+    {
+        "database": "InfluxDB",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Influxdb_logo.svg",
+    },
+    {
+        "database": "Snowflake",
+        "icon": "https://upload.wikimedia.org/wikipedia/en/1/16/Snowflake_Logo.svg",
+    },
+    {
+        "database": "BigQuery",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Google_BigQuery_Logo.svg",
+    },
+    {
+        "database": "Amazon RDS",
+        "icon": "https://d1.awsstatic.com/rds/Images/Amazon-RDS_icon.50d06d6a3ae8cefd2a9c282e21e0cf7b96b2a0c7.png",
+    },
+    {
+        "database": "IBM Db2",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/f/f9/IBM_DB2_logo.png",
+    },
+]

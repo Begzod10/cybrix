@@ -1,0 +1,58 @@
+from django.db import models
+
+from django.db.models.signals import post_migrate
+from django.dispatch import receiver
+
+
+class Language(models.Model):
+    name = models.CharField(max_length=255)
+    icon = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
+
+
+class Frameworks(models.Model):
+    name = models.CharField(max_length=255)
+    icon = models.CharField(max_length=500)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
+class Database(models.Model):
+    name = models.CharField(max_length=255)
+    icon = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
+
+
+@receiver(post_migrate)
+def create_languages_and_frameworks(sender, **kwargs):
+
+    from .list import programming_languages
+    for language_data in programming_languages:
+        if language_data.get('language'):
+            language, created = Language.objects.get_or_create(
+                name=language_data['language'],
+                defaults={'icon': language_data['icon']}
+            )
+            for framework in language_data.get('frameworks', []):
+                if framework.get('name'):
+                    Frameworks.objects.get_or_create(
+                        name=framework['name'],
+                        defaults={'icon': framework['icon'], 'language': language}
+                    )
+
+
+@receiver(post_migrate)
+def create_databases(sender, **kwargs):
+    from .list import databases
+    for database_data in databases:
+        if database_data.get('database'):
+            Database.objects.get_or_create(
+                name=database_data['database'],
+                defaults={'icon': database_data['icon']}
+            )
