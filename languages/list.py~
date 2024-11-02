@@ -5,8 +5,7 @@ programming_languages = [
         "frameworks": [
             {"name": "Django", "icon": "https://static.djangoproject.com/img/icon-touch.e4872c4da341.png"},
             {"name": "Flask", "icon": "https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png"},
-            {"name": "Pyramid",
-             "icon": "https://static.pylonsproject.org/projects/pyramid/en/latest/_static/pyramid.png"},
+            {"name": "Pyramid", "icon": "https://static.pylonsproject.org/projects/pyramid/en/latest/_static/pyramid.png"},
             {"name": "FastAPI", "icon": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"},
         ],
     },
@@ -35,8 +34,7 @@ programming_languages = [
         "language": "C#",
         "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
         "frameworks": [
-            {"name": ".NET",
-             "icon": "https://dotnet.microsoft.com/static/images/redesign/social/twitter-image-netcore.png"},
+            {"name": ".NET", "icon": "https://dotnet.microsoft.com/static/images/redesign/social/twitter-image-netcore.png"},
             {"name": "ASP.NET", "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"},
             {"name": "Blazor", "icon": "https://blazor.net/images/logo.svg"},
         ],
@@ -105,8 +103,7 @@ programming_languages = [
         "icon": "https://dart.dev/assets/img/logo/logo-white-text.svg",
         "frameworks": [
             {"name": "Flutter", "icon": "https://flutter.dev/images/flutter-logo-sharing.png"},
-            {"name": "AngularDart",
-             "icon": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg"},
+            {"name": "AngularDart", "icon": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg"},
         ],
     },
     {

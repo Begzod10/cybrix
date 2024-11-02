@@ -13,9 +13,9 @@ class Project(models.Model):
     finishing_date = models.DateField(null=True)
     project_type = models.ForeignKey(ProjectType, on_delete=models.CASCADE, null=True)
     project_url = models.URLField(null=True)
-    language = models.ManyToManyField('languages.Language',null=True)
-    framework = models.ManyToManyField('languages.Frameworks', null=True)
-    database = models.ManyToManyField('languages.Database',  null=True)
+    language = models.ManyToManyField('languages.Language')
+    framework = models.ManyToManyField('languages.Frameworks')
+    database = models.ManyToManyField('languages.Database')
 
     def __str__(self):
         return self.name

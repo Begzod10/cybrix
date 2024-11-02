@@ -8,10 +8,7 @@ class Language(models.Model):
     name = models.CharField(max_length=255)
     icon = models.CharField(max_length=500)
 
-    def __str__(self):
-        return {"name": self.name, "icon": self.icon}
-
-    def to_dict(self):
+    def __dict__(self):
         return {"name": self.name, "icon": self.icon}
 
 
@@ -20,10 +17,7 @@ class Frameworks(models.Model):
     icon = models.CharField(max_length=500)
     language = models.ForeignKey(Language, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return {"name": self.name, "icon": self.icon}
-
-    def to_dict(self):
+    def __dict__(self):
         return {"name": self.name, "icon": self.icon}
 
 
@@ -31,10 +25,7 @@ class Database(models.Model):
     name = models.CharField(max_length=255)
     icon = models.CharField(max_length=500)
 
-    def __str__(self):
-        return {"name": self.name, "icon": self.icon}
-
-    def to_dict(self):
+    def __dict__(self):
         return {"name": self.name, "icon": self.icon}
 
 

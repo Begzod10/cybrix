@@ -28,7 +28,3 @@ class FrameworkViewSet(QueryParamFilterMixin, viewsets.ModelViewSet):
     filter_mappings = {'language': 'language'}
     queryset = Frameworks.objects.all()
     serializer_class = FrameworksSerializers
-
-    def destroy(self, request, *args, **kwargs):
-        super().destroy(request, *args, **kwargs)
-        return Response({'message': 'deleted'}, status=status.HTTP_200_OK)
