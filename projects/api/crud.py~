@@ -18,11 +18,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
         response = super().destroy(request, *args, **kwargs)
         return Response({'message': 'deleted'}, status=status.HTTP_200_OK)
 
-    def get_serializer(self, *args, **kwargs):
-        serializer_class = self.get_serializer_class()
-        kwargs['context'] = self.get_serializer_context()
-        return ProjectDetailSerializer(*args, **kwargs)
-
 
 class ProjectDocumentsViewSet(viewsets.ModelViewSet):
     queryset = ProjectDocuments.objects.all()
