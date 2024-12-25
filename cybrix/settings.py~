@@ -72,7 +72,7 @@ DATABASES = {
         'NAME': os.getenv('DJANGO_DB_NAME', 'cybrix'),
         'USER': os.getenv('DJANGO_DB_USER', 'postgres'),
         'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', '123'),
-        'HOST': os.getenv('DJANGO_DB_HOST', 'db'),
+        'HOST': os.getenv('DJANGO_DB_HOST', 'localhost'),
         'PORT': '5432',
     }
 }
