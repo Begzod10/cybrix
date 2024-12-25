@@ -2,7 +2,7 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 
 from projects.models import Project, ProjectDocuments
-from projects.serializers import ProjectSerializers, ProjectDocumentsSerializers,ProjectDetailSerializer
+from projects.serializers import ProjectSerializers, ProjectDocumentsSerializers, ProjectDetailSerializer
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
@@ -10,18 +10,18 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializers
 
     def get_serializer_class(self):
-        if self.action == 'retrieve':
+        if self.request.method == 'GET':
             return ProjectDetailSerializer
-        return ProjectSerializers
+        else:
+            return self.serializer_class
 
     def destroy(self, request, *args, **kwargs):
-        response = super().destroy(request, *args, **kwargs)
+        super().destroy(request, *args, **kwargs)
         return Response({'message': 'deleted'}, status=status.HTTP_200_OK)
 
     def get_serializer(self, *args, **kwargs):
-        serializer_class = self.get_serializer_class()
-        kwargs['context'] = self.get_serializer_context()
-        return ProjectDetailSerializer(*args, **kwargs)
+        kwargs.setdefault('context', self.get_serializer_context())
+        return self.get_serializer_class()(*args, **kwargs)
 
 
 class ProjectDocumentsViewSet(viewsets.ModelViewSet):
